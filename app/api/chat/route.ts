@@ -59,7 +59,7 @@ export async function POST(req: Request) {
       { role: 'system', content: `Relevant content:\n${context}` },
       ...messages,
     ],
-    max_tokens: 16000,
+    maxTokens: 16000,
     temperature: 0.1  // Low temperature for factual, consistent responses
   }).toDataStreamResponse();
 }
